@@ -1,0 +1,17 @@
+
+<script>
+function roll(N) { 
+    
+    var K = (N*N + N)/2;
+    console.log(N*N + N);
+    var x = Math.floor(Math.random() * K) + 1;
+    var p = 1 + N - Math.ceil((Math.sqrt(1 + 8 * x) - 1)/2.0);
+    console.log(N + ", " + K + "," + x + ", " + p);
+    return p;
+}
+</script>
+
+Number of players: <input id='input'/>
+<button onclick="document.getElementById('output').innerHTML = roll(Number(document.getElementById('input').value))">Roll</button>
+
+Winner <span id='output'/>
